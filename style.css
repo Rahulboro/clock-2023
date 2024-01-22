@@ -8,13 +8,14 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: #4e4e4e;
+    overflow: hidden;
 }
 
 .wrapper{
     position: relative;
     width: 500px;
     height: 500px;
-    background-color: seagreen;
     border-radius: 50%;
 
 }
@@ -22,7 +23,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: purple;
+
     border-radius: 50%;
 }
 .numbers-hours span{
@@ -30,10 +31,47 @@ body{
     /* 360deg / 12 = 30deg  */
     transform: rotate(calc(var(--index)* 30deg));
     inset: 6px;
+    text-align: center;
 }
-
 
 .numbers-hours span p {
     font-size: 50px;
+    color: white;
+    text-shadow: 0  0 10px #0ef;
+    transform: rotate(calc(var(--index)* -30deg));
+}
+.hands-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.hands-box .hand{
+    position: absolute;
+    border-radius: 50%;
+}
+.hands-box .hour{
+    width: 320px;
+    height: 320px;
+    border: 2px solid red;
+}
+.hands-box .hour i{
+    width: 8px;
+    height: 160px;
+    background-color: red; 
+}
+
+.hands-box .minute{
+    width: 450px;
+    height: 450px;
+    border: 2px solid yellow;
+}
+.hands-box .minute i {
+    width: 9px;
+}
+.hands-box .second{
+    width: 480px;
+    height: 480px;
+    border: 2px solid white;
 }
